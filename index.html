@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#d8d5cd">
+  <title>あと3センチ。 | ONE TAKE GAME #002</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app" aria-label="あと3センチ。">
+    <section id="titleScreen" class="panel title-panel">
+      <div class="eyebrow">ONE TAKE GAME #002</div>
+      <h1>あと3センチ。</h1>
+      <p class="howto">車は左右に動きながら回転します。<br>タイミングを見て上にスワイプ！<br>空いている駐車スペースに停めよう。</p>
+      <button id="startButton" class="primary-button" type="button">スタート</button>
+    </section>
+
+    <section id="gameScreen" class="game-screen" hidden>
+      <canvas id="gameCanvas" width="390" height="760" aria-label="駐車ゲーム画面"></canvas>
+      <div id="bestDisplay" class="best" aria-live="polite">BEST --</div>
+      <div id="swipeHint" class="swipe-hint" hidden>上にスワイプ！</div>
+
+      <div id="resultPanel" class="result-panel" hidden aria-live="assertive">
+        <div id="resultMain" class="result-main"></div>
+        <div id="resultSub" class="result-sub"></div>
+        <button id="retryButton" class="primary-button retry" type="button">もう一回</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./game.js"></script>
+</body>
+</html>
